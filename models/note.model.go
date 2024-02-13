@@ -27,7 +27,7 @@ type ErrorResponse struct {
 
 func ValidateStruct[T any](payload T) []*ErrorResponse {
 	var errors []*ErrorResponse
-	err := validate.Struct(paload)
+	err := validate.Struct(payload)
 	if err != nil {
 		for _, err := range err.(validator.ValidationErrors) {
 			var element ErrorResponse
