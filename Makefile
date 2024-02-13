@@ -1,5 +1,5 @@
 run:
-	air
+	go run main.go
 
 installs:
 	go get github.com/gofiber/fiber/v2
