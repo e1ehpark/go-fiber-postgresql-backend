@@ -4,7 +4,7 @@ import (
 	"log"
 
 	"github.com/gofiber/fiber/v2"
-	"github.com/gofiber/fiver/v2//middleware/cors"
+	"github.com/gofiber/fiver/v2/middleware/cors"
 	"github.com/gofiber/fiber/v2/middleware/logger"
 	"github.com/e1ehpark/go-fiber-postgresql-backend/controllers"
 	"github.com/e1ehpark/go-fiber-postgresql-backend/initializers"
