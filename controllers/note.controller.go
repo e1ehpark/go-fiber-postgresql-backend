@@ -11,7 +11,7 @@ import (
 )
 
 func CreateNoteHandler(c *fiber.Ctx) error {
-	var payload *models.CreageNoteSchema
+	var payload *models.CreateNoteSchema
 
 	if err := c.BodyParser(&payload); err != nil {
 		return c.Status(fiber.StatusBadRequest).JSON(fiber.Map{"status": "fail", "message": err.Error()})
@@ -29,7 +29,7 @@ func CreateNoteHandler(c *fiber.Ctx) error {
 		Category:  payload.Category,
 		Published: payload.Published,
 		CreatedAt: now,
-		UpdateAt:  now,
+		UpdatedAt: now,
 	}
 
 	result := initializers.DB.Create(&newNote)
