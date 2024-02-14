@@ -86,9 +86,8 @@ func UpdateNote(c *fiber.Ctx) error {
 	if payload.Category != "" {
 		updates["category"] = payload.Category
 	}
-	if payload.Published != nil {
-		updates["published"] = payload.Published
-	}
+
+	updates["published"] = payload.Published
 
 	updates["updated_at"] = time.Now()
 
