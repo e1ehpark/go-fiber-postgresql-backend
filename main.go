@@ -11,7 +11,7 @@ import (
 )
 
 func init() {
-	config, err := initializers.LoadConfig(".\\")
+	config, err := initializers.LoadConfig()
 	if err != nil {
 		log.Fatalln("Failed to load environment variables! \n", err.Error())
 	}
