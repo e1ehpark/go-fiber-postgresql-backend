@@ -5,13 +5,13 @@ import (
 )
 
 type Config struct {
-	DBHost     string `mapstructure:"POSTGRES__HOST"`
-	DBUser string `mapstructure:"POSTGRES__USER"`
-	DBPassword string `mapstructure:"POSTGRES__PASSWORD"`
-	DBName     string `mapstructure:"POSTGRES__DB"`
-	DBPort     string `mapstructure:"POSTGRES__PORT"`
+	DBHost     string `mapstructure:"POSTGRES_HOST"`
+	DBUser     string `mapstructure:"POSTGRES_USER"`
+	DBPassword string `mapstructure:"POSTGRES_PASSWORD"`
+	DBName     string `mapstructure:"POSTGRES_DB"`
+	DBPort     string `mapstructure:"POSTGRES_PORT"`
 
-	ClientOrigin string `mapstructure:"CLIENT__ORIGIN"`
+	ClientOrigin string `mapstructure:"CLIENT_ORIGIN"`
 }
 
 func LoadConfig(path string) (config Config, err error) {
